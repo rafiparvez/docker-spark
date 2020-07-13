@@ -24,6 +24,7 @@ services:
     volumes:
       - ./conf/master:/conf
       - ./data:/tmp/data
+      - ${HOME}/.aws:/root/.aws:ro
 
   worker:
     image: gettyimages/spark
@@ -49,3 +50,4 @@ services:
     volumes:
       - ./conf/worker:/conf
       - ./data:/tmp/data
+      - ${HOME}/.aws:/root/.aws:ro
